@@ -47,7 +47,7 @@ class GameClient:
             pygame.display.set_caption(f"Platform Duel-{self.player_id}")
 
             if self.player_id == "0":
-                self.local_player = Player(100, 100, "assets/player1/walk_0.png",
+                self.local_player = Player(150, 100, "assets/player1/walk_0.png",
                                            {"left": pygame.K_a, "right": pygame.K_d, "jump": pygame.K_w,
                                             "dash": pygame.K_LSHIFT})
                 self.local_player.name = "Player 1"
@@ -61,7 +61,7 @@ class GameClient:
                                            {"left": pygame.K_a, "right": pygame.K_d, "jump": pygame.K_w,
                                             "dash": pygame.K_LSHIFT})
                 self.local_player.name = "Player 2"
-                self.enemy_player = Player(100, 100, "assets/player1/walk_0.png",
+                self.enemy_player = Player(150, 100, "assets/player1/walk_0.png",
                                            {"left": pygame.K_a, "right": pygame.K_d, "jump": pygame.K_w,
                                             "dash": pygame.K_LSHIFT})
                 self.enemy_player.name = "Player 1"
@@ -148,7 +148,7 @@ class GameClient:
     def reset_game(self):
         self.local_player.lives = 3
         self.local_player.respawn()
-        self.local_player.rect.topleft = (100, 100)
+        self.local_player.rect.topleft = (150, 100)
         self.bullets.empty()
         self.game_over = False
         self.winner = None
