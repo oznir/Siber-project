@@ -1,0 +1,21 @@
+# settings.py
+
+# Window
+SERVER_IP = "127.0.0.1"
+PORT = 5555
+
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
+FPS = 60
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+PLAYER_RED = (255, 50, 50)
+PLAYER_BLUE = (50, 50, 255)
+PLATFORM_COLOR = (60, 60, 60)
+
+# Physics
+GRAVITY = 0.5
+JUMP_SPEED = -10
+PLAYER_SPEED = 5
