@@ -101,7 +101,7 @@ class Player(pygame.sprite.Sprite):
 
         if not self.alive:
             self.respawn_timer -= 1
-            self.image.set_alpha(0)  # ✅ hide before return
+            self.image.set_alpha(0)  # hide before return
             if self.respawn_timer <= 0:
                 self.respawn()
             return
@@ -113,16 +113,16 @@ class Player(pygame.sprite.Sprite):
         self.rect.y += self.velocity.y
         self.collide_vertical(platforms)
 
-        self.image.set_alpha(255)  # ✅ fully visible if alive
+        self.image.set_alpha(255)  # fully visible if alive
 
-        if self.ammo < self.max_ammo:
+        if self.ammo < self.max_ammo:  # ammo regeneration
             self.ammo_timer -= 1
             if self.ammo_timer <= 0:
                 self.ammo += 1
                 if self.ammo < self.max_ammo:
                     self.ammo_timer = self.ammo_cooldown
 
-        if self.velocity.x != 0:
+        if self.velocity.x != 0:  # animations
             self.animation_index += self.animation_speed
             if self.animation_index >= len(self.walk_frames):
                 self.animation_index = 0

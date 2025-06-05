@@ -57,7 +57,7 @@ def create_level():
         (0, 0, 20, SCREEN_HEIGHT),  # Left wall
         (SCREEN_WIDTH - 20, 0, 20, SCREEN_HEIGHT),  # Right wall
 
-        # Optional: extra visual floor edge walls
+        #extra visual floor edge walls
         (0, SCREEN_HEIGHT - 60, 40, 60),
         (SCREEN_WIDTH - 40, SCREEN_HEIGHT - 60, 40, 60),
     ]
